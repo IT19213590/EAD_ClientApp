@@ -6,32 +6,22 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
-public class ServiceActivity extends AppCompatActivity {
+public class SignUpActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_service);
+        setContentView(R.layout.activity_sign_up);
 
         getSupportActionBar().hide();
 
         Button button = (Button) findViewById(R.id.btn_next1);
-        TextView signIn_button = (TextView) findViewById(R.id.btn_signIn);
 
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-                Intent login = new Intent(getApplicationContext(),SignUpActivity.class);
-                startActivity(login);
-            }
-        });
-
-        signIn_button.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                // TODO Auto-generated method stub
-                Intent login = new Intent(getApplicationContext(),LoginActivity.class);
+                Intent login = new Intent(getApplicationContext(),RegisterStationActivity.class);
                 startActivity(login);
             }
         });
