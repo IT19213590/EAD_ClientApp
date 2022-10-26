@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, ServiceActivity.class));
                 finish();
             }
-        },50000);
+        },2000);
 
 
 
