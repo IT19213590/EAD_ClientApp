@@ -4,10 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.example.fuelapp.adapters.StationAdapter;
@@ -34,7 +36,8 @@ public class FuelStationActivity extends AppCompatActivity {
         getSupportActionBar().hide();
 
         view = findViewById(R.id.view_btn);
-        stationView = findViewById(R.id.stationView);
+        //stationView = findViewById(R.id.stationView);
+        LinearLayout card_station = findViewById(R.id.card_station);
 
       view.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,6 +53,15 @@ public class FuelStationActivity extends AppCompatActivity {
 
         CallApi callApi = new CallApi();
         callApi.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+
+
+        card_station.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent sign = new Intent(getApplicationContext(),ViewFuel.class);
+                startActivity(sign);
+            }
+        });
 
         //fetchPosts();
     }

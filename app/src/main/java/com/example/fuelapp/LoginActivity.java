@@ -38,8 +38,8 @@ public class LoginActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-//                Intent sign = new Intent(getApplicationContext(),FuelStationActivity.class);
-//                startActivity(sign);
+                //Intent sign = new Intent(getApplicationContext(),FuelStationActivity.class);
+                //startActivity(sign);
 
                 onSignin();
 
@@ -62,7 +62,7 @@ public class LoginActivity extends AppCompatActivity {
             if(response.code() == 200){
                 Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
                 if(response.body().getData().getUserRole().contentEquals("Owner")){
-                    Intent i = new Intent(LoginActivity.this ,Owner.class);
+                    Intent i = new Intent(LoginActivity.this ,OwnerStationActivity.class);
                     i.putExtra("id",response.body().getData().getId());
                     i.putExtra("Name",response.body().getData().getName());
                     i.putExtra("Address",response.body().getData().getAddress());

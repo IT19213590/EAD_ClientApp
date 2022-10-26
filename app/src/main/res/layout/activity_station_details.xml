@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E5E5E5"
+    android:orientation="vertical"
+    tools:context=".StationDetailsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="14dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:layout_marginHorizontal="8dp"
+            android:text="Update Button" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_design"
+            android:layout_weight="1"
+            android:paddingVertical="8dp"
+            android:paddingHorizontal="6dp"
+            android:layout_marginHorizontal="8dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Next fill date" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginVertical="14dp"
+        android:paddingHorizontal="12dp">
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/sf_pro_text_bold"
+            android:textColor="#1C1243"
+            android:text="Petrol: available" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:layout_marginHorizontal="8dp"
+            android:text="Change state" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="14dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:layout_marginHorizontal="8dp"
+            android:text="Update Button" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_design"
+            android:layout_weight="1"
+            android:paddingVertical="8dp"
+            android:paddingHorizontal="6dp"
+            android:layout_marginHorizontal="8dp"
+            android:ems="10"
+            android:hint="Next fill date"
+            android:inputType="textPersonName"
+             />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="14dp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="12dp">
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/sf_pro_text_bold"
+            android:textColor="#1C1243"
+            android:text="Diesel: Not available" />
+
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:layout_marginHorizontal="8dp"
+            android:text="Change state" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="14dp"
+        android:background="@drawable/list_item_draw"
+        android:layout_marginHorizontal="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/sf_pro_text_bold"
+            android:text="Queue List"
+            android:textColor="#1C1243"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/textView29"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:text="Car queue : 19"
+            android:textColor="#1C1243"
+            android:textSize="14dp"
+            tools:layout_editor_absoluteX="121dp"
+            tools:layout_editor_absoluteY="87dp" />
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:text="Van queue : 14"
+            android:textColor="#1C1243"
+            android:textSize="14dp"
+            tools:layout_editor_absoluteX="121dp"
+            tools:layout_editor_absoluteY="87dp" />
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:text="Bike queue: 47"
+            android:textColor="#1C1243"
+            android:textSize="14dp"
+            tools:layout_editor_absoluteX="121dp"
+            tools:layout_editor_absoluteY="87dp" />
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:text="Threewhelers queue: 29"
+            android:textColor="#1C1243"
+            android:textSize="14dp"
+            tools:layout_editor_absoluteX="121dp"
+            tools:layout_editor_absoluteY="87dp" />
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:text="Bus queue: 15"
+            android:textColor="#1C1243"
+            android:textSize="14dp"
+            tools:layout_editor_absoluteX="121dp"
+            tools:layout_editor_absoluteY="87dp" />
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:text="Other petrol vehicles: 31"
+            android:textColor="#1C1243"
+            android:textSize="14dp"
+            tools:layout_editor_absoluteX="121dp"
+            tools:layout_editor_absoluteY="87dp" />
+        <TextView
+            android:id="@+id/textView24"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:text="Other diesel vehicles: 37"
+            android:textColor="#1C1243"
+            android:textSize="14dp"
+            tools:layout_editor_absoluteX="121dp"
+            tools:layout_editor_absoluteY="87dp" />
+    </LinearLayout>
+
+</LinearLayout>
