@@ -36,7 +36,7 @@ public class FuelStationActivity extends AppCompatActivity {
         view = findViewById(R.id.view_btn);
         stationView = findViewById(R.id.stationView);
 
-      /*  view.setOnClickListener(new View.OnClickListener() {
+      view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 stationView.setAdapter(stationAdapter);
@@ -50,10 +50,10 @@ public class FuelStationActivity extends AppCompatActivity {
 
         CallApi callApi = new CallApi();
         callApi.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
-*/
-        fetchPosts();
-    }
 
+        //fetchPosts();
+    }
+/*
     private void fetchPosts(){
         RetrofitClient.getRetrofitClient().getStations().enqueue(new Callback<List<Stations>>() {
             @Override
@@ -68,7 +68,7 @@ public class FuelStationActivity extends AppCompatActivity {
                     recyclerView.setAdapter(postsAdapter);
                     //postsAdapter.notifyDataSetChanged();
                     progressBar.setVisibility(View.GONE);
-                     */
+
 
                 }
             }
@@ -80,5 +80,5 @@ public class FuelStationActivity extends AppCompatActivity {
             }
         });
     }
-
+*/
 }

@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.fuelapp.R;
 import com.example.fuelapp.models.Stations;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class StationAdapter extends RecyclerView.Adapter<StationAdapter.StationViewHolder> {
