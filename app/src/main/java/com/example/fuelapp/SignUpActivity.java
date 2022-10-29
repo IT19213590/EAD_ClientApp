@@ -2,6 +2,7 @@ package com.example.fuelapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -32,6 +33,7 @@ public class SignUpActivity extends AppCompatActivity {
     private TextView VehicleNumber;
 
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +48,7 @@ public class SignUpActivity extends AppCompatActivity {
          Password = findViewById(R.id.user_password);
         NIC = findViewById(R.id.user_nic);
         Address = findViewById(R.id.user_address);
+        PhoneNo = findViewById(R.id.user_phone);
 
 
 
@@ -63,12 +66,17 @@ public class SignUpActivity extends AppCompatActivity {
          String name = this.name.getText().toString();
         String Email = this.Email.getText().toString();
         String Password = this.Password.getText().toString();
-        String PhoneNo = "0765467890";
+        String PhoneNo = this.PhoneNo.getText().toString();
         String NIC = this.NIC.getText().toString();
         String Address = this.Address.getText().toString();
         String UserRole = "Owner";
         String VehicleTypeId;
         String VehicleNumber;
+        String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+        String passwordPattern = "^(?=.*[0-9])(?=.*[A-Z])(?=.*[@#$%^&+=!])(?=\\S+$).{4,}$";
+        String NICPattern1 = "[0-9]{7}+0[0-9]{4}";
+        String NICPattern2 = "[0-9]{9}[Vv]";
+
 
         if(name.isEmpty()){
             this.name.setError("Name is required");
@@ -82,11 +90,26 @@ public class SignUpActivity extends AppCompatActivity {
             return;
         }
 
+        else if (!Email.matches(emailPattern) )
+        {
+            this.Email.setError("Incorrect Email Entered. Please enter again correctly");
+            this.Email.requestFocus();
+            return;
+        }
+
         else if(Password.isEmpty() || Password.length() < 8){
             this.Password.setError("Password must contain 8 characters");
             this.Password.requestFocus();
             return;
         }
+
+        else if (!Password.matches(passwordPattern) )
+        {
+            this.Password.setError("Incorrect password Entered.Password should contain lowercase upper case and special character ");
+            this.Password.requestFocus();
+            return;
+        }
+
 
         else if(Address.isEmpty()){
             this.Address.setError("Address is required");
@@ -96,6 +119,12 @@ public class SignUpActivity extends AppCompatActivity {
 
         else if(NIC.isEmpty()){
             this.NIC.setError("NIC is required");
+            this.NIC.requestFocus();
+            return;
+        }
+
+        else if(!NIC.matches(NICPattern1) && !NIC.matches(NICPattern2) ){
+            this.NIC.setError("NIC is not in correct form according to both and new NIC");
             this.NIC.requestFocus();
             return;
         }
@@ -110,10 +139,10 @@ public class SignUpActivity extends AppCompatActivity {
             public void onResponse(Call<ResponseUser> call, Response<ResponseUser> response) {
                 Log.e("Response", "Response code : "+ response.code());
 
-                if(response.code() ==200){
+                if(response.code() == 200){
                     Log.e("Response", "test : "+response.body().getData());
                     Toast.makeText(SignUpActivity.this, "Registration Successful", Toast.LENGTH_SHORT).show();
-                   Intent login = new Intent(getApplicationContext(),RegisterStationActivity.class);
+                   Intent login = new Intent(getApplicationContext(),LoginActivity.class);
                     startActivity(login);
                 }
                 else{

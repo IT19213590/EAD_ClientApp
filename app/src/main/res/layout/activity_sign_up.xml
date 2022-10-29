@@ -24,12 +24,12 @@
         android:id="@+id/user_nic"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/edit_text_design"
         android:ems="10"
+        android:hint="NIC"
         android:inputType="textPersonName"
         android:padding="12dp"
-        android:hint="NIC"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,12 +39,12 @@
         android:id="@+id/user_name"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/edit_text_design"
         android:ems="10"
+        android:hint="Name"
         android:inputType="textPersonName"
         android:padding="12dp"
-        android:hint="Name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
@@ -54,12 +54,12 @@
         android:id="@+id/user_email"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/edit_text_design"
         android:ems="10"
+        android:hint="Email"
         android:inputType="textPersonName"
         android:padding="12dp"
-        android:hint="Email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
@@ -69,12 +69,12 @@
         android:id="@+id/user_password"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/edit_text_design"
         android:ems="10"
+        android:hint="Password"
         android:inputType="textPersonName"
         android:padding="12dp"
-        android:hint="Password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
@@ -84,16 +84,31 @@
         android:id="@+id/user_address"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/edit_text_design"
         android:ems="10"
+        android:hint="Address"
         android:inputType="textPersonName"
         android:padding="12dp"
-        android:hint="Address"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/user_password" />
+
+    <EditText
+        android:id="@+id/user_phone"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/edit_text_design"
+        android:ems="10"
+        android:hint="Phone Number"
+        android:inputType="textPersonName"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_address" />
 
     <Button
         android:id="@+id/btn_next1"
@@ -105,15 +120,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
-        app:layout_constraintVertical_bias="0.209" />
+        app:layout_constraintTop_toBottomOf="@+id/user_phone"
+        app:layout_constraintVertical_bias="0.204" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
-        android:layout_marginTop="34dp"
+        android:layout_marginTop="22dp"
         android:fontFamily="@font/sf_pro_text_medium"
         android:text="Already have an account?"
         android:textColor="#A29EB6"
@@ -130,11 +145,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="6dp"
-        android:layout_marginTop="34dp"
+        android:layout_marginTop="22dp"
+        android:fontFamily="@font/sf_pro_text_bold"
         android:text="Sign In"
         android:textColor="#FF8A00"
         android:textSize="16dp"
-        android:fontFamily="@font/sf_pro_text_bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -142,28 +157,6 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_next1"
         app:layout_constraintVertical_bias="0.0" />
 
-    <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:baselineAligned="false"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/user_address">
 
-        <RadioButton
-            android:id="@+id/radioButton2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="User" />
-
-        <RadioButton
-            android:id="@+id/radioButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Owner" />
-    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
