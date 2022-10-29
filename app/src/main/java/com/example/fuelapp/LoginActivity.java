@@ -38,10 +38,10 @@ public class LoginActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-//                Intent sign = new Intent(getApplicationContext(),FuelStationActivity.class);
-//                startActivity(sign);
+                Intent sign = new Intent(getApplicationContext(),FuelStationActivity.class);
+                startActivity(sign);
 
-               onSignin();
+          //     onSignin();
 
             }
         });

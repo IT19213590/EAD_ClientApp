@@ -41,7 +41,7 @@ public class FuelStationActivity extends AppCompatActivity {
 
         view = findViewById(R.id.view_btn);
         stationView = findViewById(R.id.station_list_view);
-       searchView = findViewById(R.id.edit_search);
+        searchView = findViewById(R.id.edit_search);
 
         searchView.clearFocus();
        // LinearLayout card_station = findViewById(R.id.card_station);
@@ -50,6 +50,14 @@ public class FuelStationActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent search = new Intent(getApplicationContext(),ServiceActivity.class);
+                startActivity(search);
+            }
+        });
+
+        stationView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent search = new Intent(getApplicationContext(),ViewFuel.class);
                 startActivity(search);
             }
         });

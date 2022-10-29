@@ -57,5 +57,11 @@
         android:fontFamily="@font/sf_pro_text_regular"
         android:textColor="#1C1243"
         android:text="diesel_available_state" />
+    
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="Ok"
+        />
 
 </LinearLayout>
