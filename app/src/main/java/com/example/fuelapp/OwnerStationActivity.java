@@ -7,6 +7,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -24,6 +28,7 @@ public class OwnerStationActivity extends AppCompatActivity {
     private Button view;
     private RecyclerView stationView;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +37,9 @@ public class OwnerStationActivity extends AppCompatActivity {
         getSupportActionBar().hide();
 
         Button button = (Button) findViewById(R.id.btn_reg_station_1);
+        Intent i = getIntent();
+
+        final String ownerId = i.getStringExtra("id");
 
 
         stationView = findViewById(R.id.station_list_view);
@@ -39,7 +47,11 @@ public class OwnerStationActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // TODO Auto-generated method stub
+
+
                 Intent sign = new Intent(getApplicationContext(),RegisterStationActivity.class);
+                i.putExtra("ownerid",ownerId);
+                Log.e("LoginActivity", "ownerid " +ownerId);
                 startActivity(sign);
             }
         });
@@ -57,4 +69,6 @@ public class OwnerStationActivity extends AppCompatActivity {
 
 
 
-}
+
+    }
+

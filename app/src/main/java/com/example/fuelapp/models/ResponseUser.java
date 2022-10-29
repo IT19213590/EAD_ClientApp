@@ -11,7 +11,7 @@ public class ResponseUser {
     private Boolean success;
     @SerializedName("data")
     @Expose
-    private List<User> data = null;
+    private User data = null;
     @SerializedName("msg")
     @Expose
     private String msg;
@@ -19,7 +19,7 @@ public class ResponseUser {
     public ResponseUser() {
     }
 
-    public ResponseUser(Boolean success, List<User> data, String msg) {
+    public ResponseUser(Boolean success, User data, String msg) {
         this.success = success;
         this.data = data;
         this.msg = msg;
@@ -33,11 +33,11 @@ public class ResponseUser {
         this.success = success;
     }
 
-    public List<User> getData() {
+    public User getData() {
         return data;
     }
 
-    public void setData(List<User> data) {
+    public void setData(User data) {
         this.data = data;
     }
 

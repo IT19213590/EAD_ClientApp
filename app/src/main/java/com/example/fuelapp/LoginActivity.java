@@ -2,6 +2,7 @@ package com.example.fuelapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -25,6 +26,7 @@ public class LoginActivity extends AppCompatActivity {
     private TextView email;
     private TextView password;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,7 +43,7 @@ public class LoginActivity extends AppCompatActivity {
 //                Intent sign = new Intent(getApplicationContext(),FuelStationActivity.class);
 //                startActivity(sign);
 
-               onSignin();
+                onSignin();
 
             }
         });
@@ -59,15 +61,20 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<ResponseLogin> call, Response<ResponseLogin> response) {
                 Log.e("LoginActivity", "Response code " +response.code());
+
+
             if(response.code() == 200){
                 Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
                 if(response.body().getData().getUserRole().contentEquals("Owner")){
+                    Log.e("LoginActivity", "id " +response.body().getData().getId());
                     Intent i = new Intent(LoginActivity.this ,OwnerStationActivity.class);
                     i.putExtra("id",response.body().getData().getId());
                     i.putExtra("Name",response.body().getData().getName());
                     i.putExtra("Address",response.body().getData().getAddress());
                     i.putExtra("Email",response.body().getData().getEmail());
                     i.putExtra("NiC",response.body().getData().getNIC());
+                    startActivity(i);
+
                 }else{
 
                     Intent i = new Intent(LoginActivity.this ,FuelStationActivity.class);
@@ -78,7 +85,7 @@ public class LoginActivity extends AppCompatActivity {
                     i.putExtra("NiC",response.body().getData().getNIC());
                     i.putExtra("NiC",response.body().getData().getVehicleNumber());
                     i.putExtra("NiC",response.body().getData().getVehicleTypeId());
-
+                    startActivity(i);
 
                 }
             }else{

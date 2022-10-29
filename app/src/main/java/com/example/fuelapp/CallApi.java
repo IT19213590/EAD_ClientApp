@@ -20,7 +20,7 @@ public abstract class CallApi extends AsyncTask<String,Void,String> {
     protected String doInBackground(String... strings) {
         String result = "";
         try{
-            URL url = new URL("http://172.25.112.1:5000/api/Station");
+            URL url = new URL("http://192.168.1.15:5000/api/Station");
             HttpURLConnection httpURLConnection = (HttpURLConnection)url.openConnection();
             InputStream inputStream = httpURLConnection.getInputStream();
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
@@ -38,6 +38,7 @@ public abstract class CallApi extends AsyncTask<String,Void,String> {
 
     @Override
     protected void onPostExecute(String result) {
+        System.out.println("result "+ result);
         super.onPostExecute(result);
 
         try{
