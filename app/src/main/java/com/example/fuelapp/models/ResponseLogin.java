@@ -24,7 +24,7 @@ public class ResponseLogin {
     public ResponseLogin() {
     }
 
-    public ResponseLogin(Boolean success, User data, String msg, String token) {
+    public ResponseLogin(Boolean success, User data,String token, String msg) {
         this.success = success;
         this.data = data;
         this.msg = msg;

@@ -3,43 +3,43 @@ package com.example.fuelapp.models;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 public class User {
-    @SerializedName("_id")
+    @SerializedName("id")
     @Expose
     private String id;
 
-    @SerializedName("Name")
+    @SerializedName("name")
     @Expose
     private String name;
 
-    @SerializedName("Email")
+    @SerializedName("email")
     @Expose
     private String Email;
 
-    @SerializedName("Password")
+    @SerializedName("password")
     @Expose
     private String Password;
 
-    @SerializedName("PhoneNo")
+    @SerializedName("phoneno")
     @Expose
     private String PhoneNo;
 
-    @SerializedName("NIC")
+    @SerializedName("nic")
     @Expose
     private String NIC;
 
-    @SerializedName("Address")
+    @SerializedName("address")
     @Expose
     private String Address;
 
-    @SerializedName("UserRole")
+    @SerializedName("userrole")
     @Expose
     private String UserRole;
 
-    @SerializedName("VehicleTypeId")
+    @SerializedName("vehicletypeid")
     @Expose
     private String VehicleTypeId;
 
-    @SerializedName("VehicleNumber")
+    @SerializedName("vehiclenumber")
     @Expose
     private String VehicleNumber;
 
@@ -160,4 +160,6 @@ public class User {
         VehicleTypeId = vehicleTypeId;
         VehicleNumber = vehicleNumber;
     }
+
+
 }
