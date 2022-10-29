@@ -31,6 +31,7 @@ public class FuelStationActivity extends AppCompatActivity {
     private Button view;
    private RecyclerView stationView;
    private SearchView searchView;
+   private Button station_btn;
    private List<Stations> stationsArrayList;
 
     @Override

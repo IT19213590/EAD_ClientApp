@@ -1,14 +1,17 @@
 package com.example.fuelapp.adapters;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.fuelapp.R;
+import com.example.fuelapp.ViewFuel;
 import com.example.fuelapp.models.Stations;
 
 import java.util.ArrayList;
@@ -38,6 +41,18 @@ public class StationAdapter extends RecyclerView.Adapter<StationAdapter.StationV
         holder.diesel_available_state.setText(station.diesel_available_state);
         holder.address.setText(station.address);
         holder.stationId.setText(String.valueOf(station.stationId));
+        holder.view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(holder.view.getContext(), ViewFuel.class);
+                intent.putExtra("cars_quque_count", stationsList.get(position).cars_quque_count);
+                intent.putExtra("bike_quque_count", stationsList.get(position).bike_quque_count);
+                intent.putExtra("threewheel_quque_count", stationsList.get(position).threewheel_quque_count);
+                intent.putExtra("prtrol_status", stationsList.get(position).petrol_available_state);
+
+                holder.view.getContext().startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -47,6 +62,7 @@ public class StationAdapter extends RecyclerView.Adapter<StationAdapter.StationV
 
     public class StationViewHolder extends RecyclerView.ViewHolder {
         TextView stationName,petrol_available_state,diesel_available_state,address,stationId,cars_quque_count,bike_quque_count,threewheel_quque_count,prtrol_quque_count,bus_quque_count,van_quque_count,fueling_Time_per_vehicle,next_petrol_refill_date,next_diesel_refill_date;
+        Button view;
         public StationViewHolder(@NonNull View itemView) {
             super(itemView);
             stationName = itemView.findViewById(R.id.edit_stationName);
@@ -64,6 +80,7 @@ public class StationAdapter extends RecyclerView.Adapter<StationAdapter.StationV
             next_petrol_refill_date = itemView.findViewById(R.id.edit_next_petrol_refill_date);
             next_diesel_refill_date = itemView.findViewById(R.id.edit_next_diesel_refill_date);
             */
+            view = (Button) itemView.findViewById(R.id.station_view);
         }
     }
 }
