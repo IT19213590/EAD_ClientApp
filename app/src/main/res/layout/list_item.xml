@@ -3,97 +3,59 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginVertical="12dp"
+    android:background="@drawable/list_item_draw"
     android:orientation="vertical">
 
-
-    <TextView
-        android:id="@+id/others_diesel_count"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
 
     <TextView
         android:id="@+id/edit_stationName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="#1C1243"
+        android:textSize="18dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="10dp"
+        android:fontFamily="@font/sf_pro_text_bold"
         android:text="stationName" />
-
-    <TextView
-        android:id="@+id/edit_petrol_available_state"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="petrol_available_state" />
-
-    <TextView
-        android:id="@+id/edit_diesel_available_state"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="diesel_available_state" />
 
     <TextView
         android:id="@+id/edit_address"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:fontFamily="@font/sf_pro_text_regular"
+        android:textColor="#1C1243"
+        android:textSize="14dp"
         android:text="address" />
 
     <TextView
         android:id="@+id/edit_stationId"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:layout_marginHorizontal="16dp"
+        android:fontFamily="@font/sf_pro_text_regular"
+        android:textColor="#1C1243"
+        android:text="StationId" />
 
     <TextView
-        android:id="@+id/edit_cars_quque_count"
+        android:id="@+id/edit_petrol_available_state"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:layout_marginHorizontal="16dp"
+        android:fontFamily="@font/sf_pro_text_regular"
+        android:textColor="#1C1243"
+        android:text="petrol_available_state" />
 
     <TextView
-        android:id="@+id/edit_bike_quque_count"
+        android:id="@+id/edit_diesel_available_state"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:layout_marginHorizontal="16dp"
+        android:fontFamily="@font/sf_pro_text_regular"
+        android:textColor="#1C1243"
+        android:text="diesel_available_state" />
 
-    <TextView
-        android:id="@+id/edit_threewheel_quque_count"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
-
-    <TextView
-        android:id="@+id/edit_others_prtrol_quque_count"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
-
-    <TextView
-        android:id="@+id/edit_bus_quque_count"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
-
-    <TextView
-        android:id="@+id/edit_van_quque_count"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
-
-    <TextView
-        android:id="@+id/edit_fueling_Time_per_vehicle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
-
-    <TextView
-        android:id="@+id/edit_next_petrol_refill_date"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
-
-    <TextView
-        android:id="@+id/edit_next_diesel_refill_date"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
 </LinearLayout>
