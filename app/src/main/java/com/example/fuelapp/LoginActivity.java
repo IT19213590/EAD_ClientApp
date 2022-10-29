@@ -85,7 +85,7 @@ public class LoginActivity extends AppCompatActivity {
                     i.putExtra("NiC",response.body().getData().getNIC());
                     i.putExtra("NiC",response.body().getData().getVehicleNumber());
                     i.putExtra("NiC",response.body().getData().getVehicleTypeId());
-
+                    startActivity(i);
 
                 }
             }else{

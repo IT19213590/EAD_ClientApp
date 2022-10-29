@@ -27,7 +27,6 @@ public class OwnerStationActivity extends AppCompatActivity {
     private StationAdapter stationAdapter;
     private Button view;
     private RecyclerView stationView;
-public class OwnerStationActivity extends AppCompatActivity {
 
 
     @Override
@@ -38,7 +37,6 @@ public class OwnerStationActivity extends AppCompatActivity {
         getSupportActionBar().hide();
 
         Button button = (Button) findViewById(R.id.btn_reg_station_1);
-        LinearLayout button2 = (LinearLayout) findViewById(R.id.card_station);
         Intent i = getIntent();
 
         final String ownerId = i.getStringExtra("id");
@@ -71,13 +69,6 @@ public class OwnerStationActivity extends AppCompatActivity {
 
 
 
-        button2.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                // TODO Auto-generated method stub
-                Intent sign = new Intent(getApplicationContext(),StationDetailsActivity.class);
-                startActivity(sign);
-            }
-        });
+
     }
 
-}
