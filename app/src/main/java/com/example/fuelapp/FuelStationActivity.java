@@ -79,7 +79,6 @@ public class FuelStationActivity extends AppCompatActivity {
         };
         callApi.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
 
-        System.out.println("Print: "+stationAdapter);
 
 
     }

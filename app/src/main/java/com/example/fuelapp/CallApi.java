@@ -38,7 +38,6 @@ public abstract class CallApi extends AsyncTask<String,Void,String> {
 
     @Override
     protected void onPostExecute(String result) {
-        System.out.println("result "+ result);
         super.onPostExecute(result);
 
         try{

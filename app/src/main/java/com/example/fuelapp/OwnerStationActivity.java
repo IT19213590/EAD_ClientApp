@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.fuelapp.adapters.AdminStationAdapter;
 import com.example.fuelapp.adapters.StationAdapter;
 import com.example.fuelapp.models.Stations;
 
@@ -20,8 +21,8 @@ import java.util.List;
 
 public class OwnerStationActivity extends AppCompatActivity {
 
-    private List<Stations> stationsList = new ArrayList<>();
-    private StationAdapter stationAdapter;
+    private List<Stations> stationsList;
+    private StationAdapter adminStationAdapter;
     private Button view;
     private RecyclerView stationView;
 
@@ -56,9 +57,10 @@ public class OwnerStationActivity extends AppCompatActivity {
         CallApi callApi = new CallApi() {
             @Override
             public void getList(List<Stations> stationsList) {
-                stationAdapter = new StationAdapter(stationsList);
+
+                adminStationAdapter = new StationAdapter(stationsList);
                 stationView.setLayoutManager(new LinearLayoutManager(OwnerStationActivity.this));
-                stationView.setAdapter(stationAdapter);
+                stationView.setAdapter(adminStationAdapter);
             }
         };
         callApi.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
