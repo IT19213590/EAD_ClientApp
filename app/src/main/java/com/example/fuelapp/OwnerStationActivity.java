@@ -8,12 +8,9 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 
-import android.content.Intent;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.LinearLayout;
 
 import com.example.fuelapp.adapters.StationAdapter;
 import com.example.fuelapp.models.Stations;
@@ -36,7 +33,7 @@ public class OwnerStationActivity extends AppCompatActivity {
 
         getSupportActionBar().hide();
 
-        Button button = (Button) findViewById(R.id.btn_reg_station_1);
+        Button button = (Button) findViewById(R.id.btn_user);
         Intent i = getIntent();
 
         final String ownerId = i.getStringExtra("id");
