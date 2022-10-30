@@ -8,6 +8,15 @@
     android:background="#E5E5E5"
     tools:context=".ViewFuel">
 
+    <Button
+        android:id="@+id/back_btn"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginHorizontal="12dp"
+        android:text="Back"
+
+        android:textAllCaps="false" />
+
     <TextView
         android:id="@+id/textView4"
         android:layout_width="match_parent"
@@ -35,7 +44,7 @@
             android:text="Petrol:" />
 
         <TextView
-            android:id="@+id/textView20"
+            android:id="@+id/petrol_state"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -63,13 +72,13 @@
 
 
         <TextView
-            android:id="@+id/textView25"
+            android:id="@+id/next_petrol"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:fontFamily="@font/sf_pro_text_regular"
             android:textColor="#1C1243"
-            android:text="2022/11/14" />
+            android:text="" />
     </LinearLayout>
 
     <LinearLayout
@@ -89,7 +98,7 @@
             android:text="Diesel:" />
 
         <TextView
-            android:id="@+id/textView31"
+            android:id="@+id/diesel_state"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -117,13 +126,13 @@
 
 
         <TextView
-            android:id="@+id/textView28"
+            android:id="@+id/next_diesel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:fontFamily="@font/sf_pro_text_regular"
             android:textColor="#1C1243"
-            android:text="2022/11/14" />
+            android:text="" />
     </LinearLayout>
 
     <LinearLayout
@@ -135,15 +144,24 @@
 
         <TextView
             android:id="@+id/textView1"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:fontFamily="@font/sf_pro_text_bold"
             android:textColor="#1C1243"
-            android:text="Car Queue                         " />
+            android:text="Car Queue: " />
+        <TextView
+            android:id="@+id/car_count"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:textColor="#1C1243"
+            android:text="" />
 
         <Button
-            android:id="@+id/button5"
+            android:id="@+id/join_car"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -162,15 +180,24 @@
 
         <TextView
             android:id="@+id/textView2"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:fontFamily="@font/sf_pro_text_bold"
             android:textColor="#1C1243"
-            android:text="Van Queue                          " />
+            android:text="Van Queue: " />
+        <TextView
+            android:id="@+id/van_count"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:textColor="#1C1243"
+            android:text="" />
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/join_van"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -188,15 +215,24 @@
 
         <TextView
             android:id="@+id/textView3"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:fontFamily="@font/sf_pro_text_bold"
             android:textColor="#1C1243"
-            android:text="Bike Queue                          " />
+            android:text="Bike Queue: " />
+
+        <TextView
+            android:id="@+id/bike_count"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:textColor="#1C1243"
+            android:text="" />
 
         <Button
-            android:id="@+id/button6"
+            android:id="@+id/join_bike"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -214,15 +250,24 @@
 
         <TextView
             android:id="@+id/textView6"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:fontFamily="@font/sf_pro_text_bold"
             android:textColor="#1C1243"
-            android:text="Threewheler Queue             " />
+            android:text="Threewheler Queue: " />
+
+        <TextView
+            android:id="@+id/threewheel_count"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:textColor="#1C1243"
+            android:text="" />
 
         <Button
-            android:id="@+id/button8"
+            android:id="@+id/join_threewheeler"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -240,15 +285,24 @@
 
         <TextView
             android:id="@+id/textView7"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:fontFamily="@font/sf_pro_text_bold"
             android:textColor="#1C1243"
-            android:text="Other Petrol Vehicle Queue" />
+            android:text="Other Petrol Vehicle Queue: " />
+
+        <TextView
+            android:id="@+id/other_petrol_count"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:textColor="#1C1243"
+            android:text="" />
 
         <Button
-            android:id="@+id/button9"
+            android:id="@+id/other_petrol_join"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"

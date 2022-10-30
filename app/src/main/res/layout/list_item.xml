@@ -58,4 +58,11 @@
         android:textColor="#1C1243"
         android:text="diesel_available_state" />
 
+    <Button
+        android:id="@+id/station_view"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="16dp"
+        android:text="View" />
+
 </LinearLayout>
