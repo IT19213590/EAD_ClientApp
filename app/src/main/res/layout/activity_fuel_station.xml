@@ -54,7 +54,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/sf_pro_text_bold"
-            android:text="Owners Station List"
+            android:text="Station List"
             android:textAlignment="center"
             android:textColor="#1C1243"
             android:textSize="32dp" />
