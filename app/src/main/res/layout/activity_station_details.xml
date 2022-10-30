@@ -53,7 +53,7 @@
             android:text="Petrol: available" />
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/join_van"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -70,7 +70,7 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button5"
+            android:id="@+id/join_car"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -110,7 +110,7 @@
             android:text="Diesel: Not available" />
 
         <Button
-            android:id="@+id/button9"
+            android:id="@+id/other_petrol_join"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
