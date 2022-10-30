@@ -47,7 +47,7 @@ public class OwnerStationActivity extends AppCompatActivity {
 
 
                 Intent sign = new Intent(getApplicationContext(),RegisterStationActivity.class);
-                i.putExtra("ownerid",ownerId);
+                sign.putExtra("ownerid",ownerId);
                 Log.e("LoginActivity", "ownerid " +ownerId);
                 startActivity(sign);
             }
