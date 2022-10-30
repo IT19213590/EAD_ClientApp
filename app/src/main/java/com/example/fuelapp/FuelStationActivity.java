@@ -82,17 +82,6 @@ public class FuelStationActivity extends AppCompatActivity {
         System.out.println("Print: "+stationAdapter);
 
 
-
-/*
-        card_station.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent sign = new Intent(getApplicationContext(),ViewFuel.class);
-                startActivity(sign);
-            }
-        });
-*/
-        //fetchPosts();
     }
 
    @Override
@@ -114,43 +103,6 @@ public class FuelStationActivity extends AppCompatActivity {
         }
     }
 
-//    private void fetchPosts(){
-//        RetrofitClient.getRetrofitClient().getStations().enqueue(new Callback<List<Stations>>() {
-//            @Override
-//            public void onResponse(Call<List<Stations>> call, Response<List<Stations>> response) {
-//                if(response.isSuccessful() && response.body() == null){
-//                    stationsList.addAll(response.body());
-//                    stationView.setAdapter(stationAdapter);
-//                   // stationAdapter.notifyDataSetChanged();
-//
-//
-//                    postsList.addAll(response.body());
-//                    recyclerView.setAdapter(postsAdapter);
-//                    //postsAdapter.notifyDataSetChanged();
-//                    progressBar.setVisibility(View.GONE);
-//
-//
-//                }
-//            }
-//
-//            @Override
-//            public void onFailure(Call<List<Stations>> call, Throwable t) {
-//                Toast.makeText(FuelStationActivity.this, "Error: "+ t.getMessage(), Toast.LENGTH_SHORT).show();
-//                System.out.println(t.getMessage());
-//            }
-//        });
-//    }
-/*
-    public void getSearchItem(String searchItem){
-        List<Stations> filteredStations = new ArrayList<>();
-
-        for (Stations stations : stationList){
-           // if(stations.stationId.)){}
-        }
-
-    }
-*/
-
     public void search(String str) {
         List<Stations> mylist = new ArrayList<>();
         for (Stations object : stationsArrayList) {
@@ -165,10 +117,7 @@ public class FuelStationActivity extends AppCompatActivity {
 
 
 
-        /*stationAdapter = new StationAdapter(mylist);
-        stationView.setLayoutManager(new LinearLayoutManager(FuelStationActivity.this));
-        stationView.setAdapter(stationAdapter);
-        */
+
 
 
     }

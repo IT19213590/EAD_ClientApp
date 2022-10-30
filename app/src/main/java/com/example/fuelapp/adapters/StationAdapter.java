@@ -45,10 +45,23 @@ public class StationAdapter extends RecyclerView.Adapter<StationAdapter.StationV
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(holder.view.getContext(), ViewFuel.class);
+                intent.putExtra("id", stationsList.get(position).id);
+                intent.putExtra("stationName", stationsList.get(position).stationName);
+                intent.putExtra("stationId", stationsList.get(position).stationId);
+                intent.putExtra("ownerId", stationsList.get(position).ownerId);
+                intent.putExtra("prtrol_status", stationsList.get(position).petrol_available_state);
+                intent.putExtra("diesel_status", stationsList.get(position).diesel_available_state);
                 intent.putExtra("cars_quque_count", stationsList.get(position).cars_quque_count);
                 intent.putExtra("bike_quque_count", stationsList.get(position).bike_quque_count);
                 intent.putExtra("threewheel_quque_count", stationsList.get(position).threewheel_quque_count);
-                intent.putExtra("prtrol_status", stationsList.get(position).petrol_available_state);
+                intent.putExtra("others_prtrol_quque_count", stationsList.get(position).others_prtrol_quque_count);
+                intent.putExtra("bus_quque_count", stationsList.get(position).bus_quque_count);
+                intent.putExtra("van_quque_count", stationsList.get(position).van_quque_count);
+                intent.putExtra("others_diesel_count", stationsList.get(position).others_diesel_count);
+                intent.putExtra("address", stationsList.get(position).address);
+                intent.putExtra("fueling_Time_per_vehicle", stationsList.get(position).fueling_Time_per_vehicle);
+                intent.putExtra("next_petrol_refill_date", stationsList.get(position).next_petrol_refill_date);
+                intent.putExtra("next_diesel_refill_date", stationsList.get(position).next_diesel_refill_date);
 
                 holder.view.getContext().startActivity(intent);
             }

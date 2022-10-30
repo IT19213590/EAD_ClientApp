@@ -48,11 +48,29 @@ public abstract class CallApi extends AsyncTask<String,Void,String> {
             for (int i =0; i < jsonArray.length(); i++){
                 JSONObject jsonObject = jsonArray.getJSONObject(i);
                 Stations stations = new Stations();
+                stations.id = jsonObject.getString("id");
                 stations.stationName = jsonObject.getString("stationName");
-                stations.address = jsonObject.getString("address");
                 stations.stationId = jsonObject.getInt("stationId");
+                stations.ownerId = jsonObject.getString("ownerId");
                 stations.petrol_available_state = jsonObject.getString("petrol_available_state");
                 stations.diesel_available_state = jsonObject.getString("diesel_available_state");
+                stations.cars_quque_count = jsonObject.getInt("cars_quque_count");
+                stations.bike_quque_count = jsonObject.getInt("bike_quque_count");
+                stations.threewheel_quque_count = jsonObject.getInt("threewheel_quque_count");
+                stations.others_prtrol_quque_count = jsonObject.getInt("others_prtrol_quque_count");
+                stations.bus_quque_count = jsonObject.getInt("bus_quque_count");
+                stations.van_quque_count = jsonObject.getInt("van_quque_count");
+                stations.others_diesel_count = jsonObject.getInt("others_diesel_count");
+                stations.address = jsonObject.getString("address");
+                stations.next_petrol_refill_date = jsonObject.getString("next_petrol_refill_date");
+                stations.next_diesel_refill_date = jsonObject.getString("next_diesel_refill_date");
+
+
+
+
+
+
+
                 stationsList.add(stations);
             }
 
