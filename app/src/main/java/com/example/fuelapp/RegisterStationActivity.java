@@ -44,13 +44,15 @@ public class RegisterStationActivity extends AppCompatActivity {
         Button button = (Button) findViewById(R.id.btn_next1);
         SationId = findViewById(R.id.station_Id);
         StationName = findViewById(R.id.station_name);
-        StationAddress = findViewById(R.id.user_address);
+        StationAddress = findViewById(R.id.station_address);
         Time_per_vehicle = findViewById(R.id.time_per_vehicle);
 
         Intent i = getIntent();
 
         final String ownerId = i.getStringExtra("ownerid");
         this.ownerId = ownerId;
+
+        System.out.println("************ownerid" + ownerId );
 
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -69,7 +71,7 @@ public class RegisterStationActivity extends AppCompatActivity {
 
         int SationId = Integer.parseInt(this.SationId.getText().toString());
         String StationName = this.StationName.getText().toString();
-        String StationAddress = "hvvwdhjqv";
+        String StationAddress = this.StationAddress.getText().toString();
         int Time_per_vehicle = Integer.parseInt(this.Time_per_vehicle.getText().toString());
 
         Station station = new Station(StationName, SationId, this.ownerId, "Not avaliable", "Not available", 0, 0, 0, 0, 0, 0, 0, StationAddress, Time_per_vehicle);
